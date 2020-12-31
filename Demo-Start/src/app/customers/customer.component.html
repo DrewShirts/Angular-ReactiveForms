@@ -263,6 +263,17 @@
             </div>
           </div>
         </div>
+
+        <div class="form-goup row mb-2">
+          <div class="col-md-4">
+            <button class="btn btn-outline-secondary"
+                    type="button"
+                    [disabled]="!addresses.valid"
+                    (click)="addAddress()">
+              Add Another Address
+            </button>
+          </div>
+        </div>
       </div>
 
       <div class="form-group row mb-2">
@@ -288,3 +299,5 @@
 <br>Touched: {{ customerForm.touched }}
 <br>Valid: {{ customerForm.valid }}
 <br>Value: {{ customerForm.value | json }}
+<br>Street: {{ addresses.get('0.street1')?.value }}
+<br>&nbsp;
